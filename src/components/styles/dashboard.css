@@ -1,0 +1,158 @@
+/* Estilos existentes */
+.dashboard-home {
+  padding: 20px;
+}
+
+.dashboard-home h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.event-info {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+.info-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.todo-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.todo-list h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.todo-list li.completed {
+  background-color: #e0f7fa;
+}
+
+.todo-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-list span {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Novos estilos para Previsão do Tempo */
+.weather-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.weather-card h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.weather-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-content img {
+  width: 50px;
+  height: 50px;
+}
+
+.weather-content p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Novos estilos para Notificações */
+.notifications-panel {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-panel h3 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.notifications-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications-panel li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notifications-panel li.read {
+  background-color: #e0f7fa;
+}
+
+.notifications-panel li span {
+  font-size: 16px;
+  color: #333;
+}
+
+.unread-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff4757;
+  border-radius: 50%;
+}
