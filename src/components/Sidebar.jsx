@@ -1,19 +1,51 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './styles/sidebar.css';
+import {
+  Home,
+  People,
+  LocalAtm,
+  Assignment,
+  Notifications,
+  Settings, // Ícone para Organização
+} from '@mui/icons-material';
 
 function Sidebar() {
+  const location = useLocation(); // Para identificar a rota atual
+
+  // Itens do menu
+  const menuItems = [
+    { path: '/dashboard', icon: <Home />, label: 'Início' },
+    { path: '/dashboard/suppliers', icon: <People />, label: 'Fornecedores' },
+    { path: '/dashboard/budget', icon: <LocalAtm />, label: 'Orçamento' },
+    { path: '/dashboard/tasks', icon: <Assignment />, label: 'Tarefas' },
+    {
+      path: '/dashboard/notifications',
+      icon: <Notifications />,
+      label: 'Notificações',
+    },
+    {
+      path: '/dashboard/organization',
+      icon: <Settings />,
+      label: 'Organização',
+    },
+  ];
+
   return (
     <div className="sidebar">
       <h2>Menu</h2>
       <ul>
-        <li><Link to="/dashboard">Início</Link></li>
-        <li><Link to="/dashboard/suppliers">Gestão de Fornecedores</Link></li>
-        <li><Link to="/dashboard/team">Gestão de Equipe</Link></li>
-        <li><Link to="/dashboard/budget">Orçamento e Finanças</Link></li>
-        <li><Link to="/dashboard/tickets">Venda de Ingressos</Link></li>
-        <li><Link to="/dashboard/credentials">Credenciais e Acessos</Link></li>
-        <li><Link to="/dashboard/marketing">Marketing e Redes Sociais</Link></li>
+        {menuItems.map((item) => (
+          <li
+            key={item.path}
+            className={location.pathname === item.path ? 'active' : ''}
+          >
+            <Link to={item.path}>
+              {item.icon}
+              <span>{item.label}</span>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
